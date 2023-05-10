@@ -1,6 +1,6 @@
 ## Repositório criado para disponibilização dos arquivos do desafio.
 
-Código para extração das tabelas dinâmicas do arquivo "vendas-combustiveis-m3.xls".
+Código nos links abaixo atendendo o desafio de extração das tabelas dinâmicas do arquivo "vendas-combustiveis-m3.xls".
 
 - Sales of oil derivative fuels by UF and product
 - Sales of diesel by UF and type
