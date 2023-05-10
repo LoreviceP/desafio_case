@@ -58,7 +58,7 @@ Uma dificuldade foi fornecer o caminho correto (pois está no windows por trás)
     dag = DAG('simple', default_args=default_args)
     t1 = BashOperator(
         task_id='testairflow',
-        bash_command='python /home/airflow/airflow/dags/scripts/file1.py',
+        bash_command='python ****PATH QUE NÃO CONSEGUI RODAR NO WINDOWS*** file1.py',
         dag=dag)
 
 ### Apenas a nível de aprendizado consegui fazer funcionar DAGs mais simples como esta, com parte do código do desafio.
