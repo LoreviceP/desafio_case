@@ -1,14 +1,16 @@
-# Repositório criado para o desafio Raízen.
+## Repositório criado para disponibilização dos arquivos do desafio.
 
-Por ter encontrado dificuldades ...
+Código para extração das tabelas dinâmicas:
+- Sales of oil derivative fuels by UF and product
+- Sales of diesel by UF and type
 
-# Google colab resolução desafio.
 
-[Link google colab](https://github.com/LoreviceP/desafio_raizen/blob/main/Raizen_Case_data_engineering_test.ipynb)
+### Links
+Para uma melhor avaliação optei por disponibilizar o código no Google Colab, conforme link abaixo.
+[- Arquivo ".ipynb"](https://github.com/LoreviceP/desafio_case/blob/main/Raizen_Case_data_engineering_test.ipynb)
 
-# Instalação do Git
-
-[Link arquivo.py](https://github.com/LoreviceP/desafio_raizen/blob/main/raizen_case_data_engineering_test.py)
+Segue também o arquivo ".py".
+[- Arquivo ".py"](https://github.com/LoreviceP/desafio_case/blob/main/raizen_case_data_engineering_test.py)
 
 
 - Em construção
