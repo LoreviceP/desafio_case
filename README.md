@@ -21,14 +21,16 @@ Arquivos gerados pelo código.
 
 ### Orquestração de pipeline de dados
 
-Em relação à orquestrar o pipeline de dados, ainda não tinha utilizado o airflow.
-Por utilizar o Windows no momento, tentei de duas maneiras, utilizando o Docker e com um Ubuntu emulado.
+O desafio também propôs orquestrar um pipeline de dados.
+A solução que eu entendi ser factível foi utilizando o Airflow, contudo ainda não tinha utilizado o mesmo.
+
+Me propus a aprender e por utilizar no meu computador o Windows no momento, tentei de duas maneiras, utilizando o Docker e com um Ubuntu habilitando o subsistema do Windows para Linux.
 
 Pelo docker consegui escrever algumas Dags, segmentando estas em tasks porém obtive alguns erros no momento da utilização de alguns pacotes python.
 
-Já no Ubuntu, por não estar familiarizado, pensei em utilizar a Dag para rodar o script como um todo para posteriormente reorganizar em taks.
+Já no Ubuntu, pensei em utilizar a Dag para rodar o script como um todo para posteriormente reorganizar em taks.
+Uma dificuldade foi fornecer o caminho correto (pois está no windows por trás) para que o airflow conseguisse rodar o pipeline.
 
-Porém uma dificuldade foi fornecer o caminho correto (pois está no windows por trás) para que o airflow conseguisse rodar o pipeline.
 
 ### Exemplo de DAG de teste, encontrei em um fórum e estive tentando fazer funcionar.
 
@@ -56,7 +58,7 @@ Porém uma dificuldade foi fornecer o caminho correto (pois está no windows por
         bash_command='python /home/airflow/airflow/dags/scripts/file1.py',
         dag=dag)
 
-Apenas a nível de aprendizado consegui fazer funcionar DAGs mais simples como esta:
+Apenas a nível de aprendizado consegui fazer funcionar DAGs mais simples como esta, com parte do código do desafio.
 
     from airflow import DAG
     from airflow.operators.python import PythonOperator
