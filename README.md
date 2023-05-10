@@ -30,7 +30,7 @@ Já no Ubuntu, por não estar familiarizado, pensei em utilizar a Dag para rodar
 
 Porém uma dificuldade foi fornecer o caminho correto (pois está no windows por trás) para que o airflow conseguisse rodar o pipeline.
 
-### Exemplo de DAG de teste:
+### Exemplo de DAG de teste, encontrei em um fórum e estive tentando fazer funcionar.
 
     from airflow import DAG
     from airflow.operators import BashOperator,PythonOperator
@@ -51,8 +51,27 @@ Porém uma dificuldade foi fornecer o caminho correto (pois está no windows por
       }
 
     dag = DAG('simple', default_args=default_args)
-t1 = BashOperator(
-    task_id='testairflow',
-    bash_command='python /home/airflow/airflow/dags/scripts/file1.py',
-    dag=dag)
+    t1 = BashOperator(
+        task_id='testairflow',
+        bash_command='python /home/airflow/airflow/dags/scripts/file1.py',
+        dag=dag)
 
+Apenas a nível de aprendizado consegui fazer funcionar DAGs mais simples como esta:
+
+    from airflow import DAG
+    from airflow.operators.python import PythonOperator
+    from datetime import datetime, timedelta
+
+    def file_request():
+        # File request
+        file_url = 'http://raw.githubusercontent.com/raizen-analytics/data-engineering-test/master/assets/vendas-combustiveis-m3.xls'
+        filename = 'vendas_combustiveis_m3.xls'
+
+        request.urlretrieve(file_url, filename)
+
+
+    with DAG(dag_id='file_request', schedule=None, start_date=datetime(2023,5,9)) as dag:
+        request_file2 = PythonOperator(
+            task_id='file_request',
+            python_callable=file_request
+        )
