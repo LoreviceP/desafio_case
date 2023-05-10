@@ -8,11 +8,11 @@ Código para extração das tabelas dinâmicas:
 ### Links
 Para uma melhor avaliação optei por disponibilizar o código no Google Colab, conforme link abaixo.
 
-[- Arquivo ".ipynb"](https://github.com/LoreviceP/desafio_case/blob/main/Raizen_Case_data_engineering_test.ipynb)
+[- Arquivo ".ipynb"](https://github.com/LoreviceP/desafio_case/blob/main/case_data_engineering_test.ipynb)
 
 Segue também o arquivo ".py".
 
-[- Arquivo ".py"](https://github.com/LoreviceP/desafio_case/blob/main/raizen_case_data_engineering_test.py)
+[- Arquivo ".py"](https://github.com/LoreviceP/desafio_case/blob/main/case_data_engineering_test.py)
 
 
 - Em construção
