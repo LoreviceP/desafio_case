@@ -19,7 +19,15 @@ Arquivos gerados pelo código.
 
 [- Files](https://github.com/LoreviceP/desafio_case/tree/main/files)
 
-### Orquestração de pipeline de dados
+## Resultados
+
+Dataframes gerados pelo código.
+
+[- Sales of oil derivative fuels by UF and product](https://github.com/LoreviceP/desafio_case/blob/main/images/sales_of_oil_derivatives_fuels_by_uf_and_product.PNG)
+
+[- Sales of oil derivative fuels by UF and product](https://github.com/LoreviceP/desafio_case/blob/main/images/sales_of_diesel_by_uf_and_type.PNG)
+
+## Orquestração de pipeline de dados
 
 O desafio também propôs orquestrar um pipeline de dados.
 
