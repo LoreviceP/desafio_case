@@ -33,17 +33,18 @@ O desafio também propôs orquestrar um pipeline de dados.
 
 A solução que eu entendi ser viável seria utilizando o Airflow, contudo ainda não tinha utilizado o mesmo.
 
-Me propus a aprender e por utilizar no meu computador o Windows no momento, tentei de duas maneiras, utilizando o Docker e com um Ubuntu habilitando o subsistema do Windows para Linux.
+Me propus a aprender e, por utilizar no meu computador o Windows no momento, tentei de duas maneiras, utilizando o Docker e com um Ubuntu habilitando o subsistema do Windows para Linux (WSL).
 
-Pelo Docker consegui subir o Airflow escrever algumas Dags, segmentando estas em tasks porém obtive alguns erros no momento da utilização de alguns pacotes python.
+Pelo Docker consegui subir o Airflow, escrever algumas Dags simples que funcionaram, com um exemplo mais abaixo.
+A ideia era segmentar as etapas do código em várias tasks, porém obtive alguns erros no momento da utilização de alguns pacotes python.
 
 [Arquivo docker-compose.yaml](https://github.com/LoreviceP/desafio_case/blob/main/files/docker-compose.yaml)
 
-Já no Ubuntu, pensei em utilizar a Dag para rodar o script como um todo para posteriormente reorganizar em taks.
-Uma dificuldade foi fornecer o caminho correto (pois está no windows por trás) para que o airflow conseguisse rodar o pipeline.
+Já no Ubuntu, pensei em utilizar a Dag para rodar o script como um todo para posteriormente reorganizar em tasks.
+Uma dificuldade foi fornecer o caminho correto do script (provavelmente por que o caminho do arquivo.py é do Windows), para que assim o airflow conseguisse rodar o pipeline.
 
 
-### Exemplo de DAG de teste para executar o script Case_Raizen, encontrei em um fórum e estive tentando fazer funcionar.
+### Exemplo de DAG de teste para executar o script Case_Raizen.py.
 
     from airflow import DAG
     from airflow.operators.bash import BashOperator
