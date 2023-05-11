@@ -25,7 +25,7 @@ Dataframes gerados pelo código.
 
 [- Sales of oil derivative fuels by UF and product](https://github.com/LoreviceP/desafio_case/blob/main/images/sales_of_oil_derivatives_fuels_by_uf_and_product.PNG)
 
-[- Sales of oil derivative fuels by UF and product](https://github.com/LoreviceP/desafio_case/blob/main/images/sales_of_diesel_by_uf_and_type.PNG)
+[- Sales of diesel by UF and type](https://github.com/LoreviceP/desafio_case/blob/main/images/sales_of_diesel_by_uf_and_type.PNG)
 
 ## Orquestração de pipeline de dados
 
