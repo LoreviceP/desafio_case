@@ -43,31 +43,44 @@ Já no Ubuntu, pensei em utilizar a Dag para rodar o script como um todo para po
 Uma dificuldade foi fornecer o caminho correto (pois está no windows por trás) para que o airflow conseguisse rodar o pipeline.
 
 
-### Exemplo de DAG de teste, encontrei em um fórum e estive tentando fazer funcionar.
+### Exemplo de DAG de teste para executar o script Case_Raizen, encontrei em um fórum e estive tentando fazer funcionar.
 
     from airflow import DAG
-    from airflow.operators import BashOperator,PythonOperator
+    from airflow.operators.bash import BashOperator
+    from airflow.operators.python import PythonOperator
+
     from datetime import datetime, timedelta
 
-    seven_days_ago = datetime.combine(datetime.today() - timedelta(7),
-                                      datetime.min.time())
+    seven_days_ago = datetime.combine(datetime.today() - timedelta(7), datetime.min.time())
 
     default_args = {
-        'owner': 'airflow',
-        'depends_on_past': False,
-        'start_date': seven_days_ago,
-        'email': ['airflow@airflow.com'],
-        'email_on_failure': False,
-        'email_on_retry': False,
-        'retries': 1,
-        'retry_delay': timedelta(minutes=5),
-      }
+            'owner': 'airflow',
+            'depends_on_past': False,
+            'start_date': seven_days_ago,
+            'email': ['airflow@airflow.com'],
+            'email_on_failure': False,
+            'email_on_retry': False,
+            'retries': 1,
+            'retry_delay': timedelta(days=1),
+          }
 
-    dag = DAG('simple', default_args=default_args)
+    dag = DAG('execute_Case_Raizen', default_args=default_args)
+
     t1 = BashOperator(
-        task_id='testairflow',
-        bash_command='python ****PATH QUE NÃO CONSEGUI RODAR NO WINDOWS*** file1.py',
+        task_id='execute_Case_Raizen.py',
+        bash_command='python Case_Raizen.py',
         dag=dag)
+        
+ </div>
+<div style="display: inline_block"><br>
+  <img align="center" alt="Airflow-test" height="400" width="1000" src="https://github.com/LoreviceP/desafio_case/blob/main/images/airflow_execute_script(1).png">
+</div>
+</div>
+<div style="display: inline_block"><br>
+  <img align="center" alt="Airflow-test" height="400" width="1000" src="https://github.com/LoreviceP/desafio_case/blob/main/images/log_erro.PNG">
+</div>
+
+
 
 ### Apenas a nível de aprendizado consegui fazer funcionar DAGs mais simples como esta, com parte do código do desafio.
 
