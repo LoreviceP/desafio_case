@@ -102,8 +102,3 @@ Uma dificuldade foi fornecer o caminho correto do script (provavelmente por que 
             task_id='file_request',
             python_callable=file_request
         )
-### Considerações.
-
-- Apesar de não conseguir completar o desafio em todos os seus pontos por entender que existe um prazo a cumprir, achei decente disponibilizar também minhas tentativas e linha de raciocínio, além dos códigos de extração e transformação que funcionaram e foram disponibilizados acima.
-- Estou ciente de que o código desenvolvido pode ser bem melhorado, partes reaproveitadas,  funções criadas, lidar com erros e exceções.
-Porém, preferi focar o tempo disponível em fazer ele funcionar e atender os requisitos.
